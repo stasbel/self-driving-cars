@@ -1,0 +1,7 @@
+<launch>
+    <!-- User control. -->
+    <node pkg="turtlesim" type="turtlesim_node" name="turtle1"/>
+    <node pkg="turtlesim" type="turtle_teleop_key" name="teleop" output="screen"/>
+    <!-- Follower. -->
+    <node pkg="follower" type="follower_node" name="follower" launch-prefix="bash -c 'sleep 0.3; $0 $@'"/>
+</launch>
